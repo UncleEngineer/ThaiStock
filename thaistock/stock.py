@@ -168,8 +168,6 @@ class SET:
 
         price = data.findAll('div',{'class':'col-xs-6'})
 
-        print(price)
-
         title = price[0].text
         stockprice = price[2].text.replace(',','')
 
@@ -189,8 +187,11 @@ class SET:
         update = data.findAll('span',{'class':'stt-remark'})
         stockupdate = update[0].text
         stockupdate = stockupdate[13:]
+        try:
+            result = [title,float(stockprice),float(change),float(pchange),stockupdate]
+        except:
+            result = [title,stockprice,change,pchange,stockupdate]
 
-        result = [title,float(stockprice),float(change),float(pchange),stockupdate]
         if show:
             if header:
                 print(hd)

@@ -12,7 +12,7 @@ DESCRIPTION = '\n\n'.join(LOAD_TEXT(_) for _ in [
 setup(
   name = 'thaistock',
   packages = ['thaistock'], 
-  version = '0.0.2',
+  version = '0.0.3',
   license='MIT', 
   description = 'Thai stock data in The Stock Exchange of Thailand (SET) by Uncle Engineer',
   long_description=DESCRIPTION,
